@@ -7,7 +7,7 @@ Example:
     $ python src/chatbot.py
 """
 
-__author__ = ""
+__author__ = "Kimi Sevilla"
 __version__ = ""
 __credits__ = "COMP-1327 Faculty"
 

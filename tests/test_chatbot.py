@@ -46,4 +46,18 @@ class TestChatBot(TestCase):
               result = get_account_number()
               self.assertEqual(result, 123456)
 
+def get_amount():
+    user_input = input("Enter an amount: ")
+    
+    try:
+        amount = float(user_input)
+    except ValueError:
+        raise TypeError("Amount must be a numeric type.")
+    
+    if amount <= 0:
+        raise ValueError("Amount must be a value greater than zero.")
+    
+    return amount
+
+
     

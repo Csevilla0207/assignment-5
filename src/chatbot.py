@@ -26,6 +26,21 @@ VALID_TASKS = [
     "exit"
 ]
 
+
+def get_acount_number():
+    user_input = input("Please enter yout account number: ")
+
+    try:
+        account_num = int(user_input)
+    except ValueError:
+        raise TypeError("Account number must be an int type.")
+    
+    if account_num not in ACCOUNTS:
+        raise ValueError("Account number entered does not exist. ")
+    
+    return account_num
+
+
 def chatbot():
     """Performs the Chatbot functionality."""
     COMPANY_NAME = "PiXELL River Financial"
